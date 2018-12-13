@@ -1,21 +1,23 @@
 apply plugin: 'com.android.application'
 buildscript {
     repositories {
+        google()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:3.2.1'
     }
 }
 allprojects {
     repositories {
+        google()
         jcenter()
     }
 }
 apply plugin: 'com.android.application'
 android {
     compileSdkVersion 17
-    buildToolsVersion '23.0.2'
+    buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "com.kaytat.simpleprotocolplayer"
         minSdkVersion 8
