@@ -17,7 +17,7 @@
 
 <resources>
 
-    <string name="app_title">Simple Protocol Player</string>
+    <string name="app_title">Simple Protocol Player2</string>
     <string name="labelIpAddr">IP Address</string>
     <string name="labelAudioPort">Audio Port</string>
     <string name="defaultAudioPort">12345</string>
@@ -32,6 +32,7 @@
         <item>24000</item>
         <item>44100 (Default)</item>
         <item>48000</item>
+        <item>96000</item>
     </string-array>
     <string-array name="stereo">
         <item>Mono</item>
