@@ -249,12 +249,14 @@ public class MusicService extends Service implements MusicFocusable {
         PendingIntent pi = PendingIntent.getActivity(getApplicationContext(), 0,
                 new Intent(getApplicationContext(), MainActivity.class),
                 PendingIntent.FLAG_UPDATE_CURRENT);
-        mNotification = new Notification();
-        mNotification.tickerText = text;
-        mNotification.icon = R.drawable.ic_stat_playing;
-        mNotification.flags |= Notification.FLAG_ONGOING_EVENT;
-        mNotification.setLatestEventInfo(getApplicationContext(), "SimpleProtocolPlayer",
-                text, pi);
+        Notification.Builder builder = new Notification.Builder(getApplicationContext());
+
+        builder.setContentIntent(pi)
+                .setSmallIcon(R.drawable.ic_stat_playing)
+                .setContentTitle("SimpleProtocolPlayer")
+                .setTicker(text);
+
+        mNotification = builder.build();
         startForeground(NOTIFICATION_ID, mNotification);
     }
 
